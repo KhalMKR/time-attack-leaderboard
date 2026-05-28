@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Time Attack Leaderboard</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="page-shell">
+		<section class="board-panel" aria-label="Top 10 leaderboard">
+			<div class="board-header">
+				<div>
+					<p class="section-label">Top 10</p>
+					<h2>Leaderboard</h2>
+				</div>
+				<div class="board-meta">Waiting for player data</div>
+			</div>
+
+			<div class="table-wrap" role="region" aria-label="Leaderboard entries">
+				<table class="leaderboard-table">
+					<thead>
+						<tr>
+							<th scope="col">Rank</th>
+							<th scope="col">Player</th>
+							<th scope="col">Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>03</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>04</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>05</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>06</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>07</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>08</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>09</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td class="blank-cell">—</td>
+							<td class="blank-cell">—</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+
+	<details class="entry-bubble" aria-label="Dummy entry panel">
+		<summary class="entry-bubble__summary">
+			<span class="entry-bubble__icon" aria-hidden="true">+</span>
+			<span class="entry-bubble__text">Entry</span>
+		</summary>
+
+		<div class="entry-bubble__panel">
+			<div class="entry-bubble__header">
+				<div>
+					<p class="entry-bubble__label">Quick Entry</p>
+					<h3>Add runner</h3>
+				</div>
+				<span class="entry-bubble__hint">dummy</span>
+			</div>
+
+			<form class="entry-bubble__form">
+				<label class="sr-only" for="runner-name">Runner name</label>
+				<input id="runner-name" class="entry-input entry-input--wide" type="text" placeholder="Runner name" aria-label="Runner name">
+
+				<div class="entry-bubble__time">
+					<label class="sr-only" for="minutes">Minutes</label>
+					<input id="minutes" class="entry-input" type="text" inputmode="numeric" placeholder="00" aria-label="Minutes">
+					<label class="sr-only" for="seconds">Seconds</label>
+					<input id="seconds" class="entry-input" type="text" inputmode="numeric" placeholder="00" aria-label="Seconds">
+					<label class="sr-only" for="milliseconds">Milliseconds</label>
+					<input id="milliseconds" class="entry-input" type="text" inputmode="numeric" placeholder="000" aria-label="Milliseconds">
+				</div>
+
+				<button class="entry-button" type="button">Queue entry</button>
+			</form>
+		</div>
+	</details>
+</body>
+</html>
