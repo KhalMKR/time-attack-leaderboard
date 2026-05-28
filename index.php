@@ -49,10 +49,20 @@ $result = $conn->query($sql);
 	<title>Time Attack Leaderboard</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<meta name="theme-color" content="#0b0b0b">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<header class="hero" role="banner" aria-label="Time Attack banner">
+		<div class="hero-inner">
+			<div class="hero-content">
+				<p class="hero-pre">METADISE SIM RACING</p>
+				<h1>TIME ATTACK<br>CHALLENGE</h1>
+				<p class="hero-sub">One lap. All out. Beat the clock.</p>
+			</div>
+		</div>
+	</header>
 	<main class="page-shell">
 		<section class="board-panel" aria-label="Top 10 leaderboard">
 			<div class="board-header">
@@ -95,8 +105,8 @@ $result = $conn->query($sql);
 								echo"
 								<tr>
 									<td>" . str_pad($i,2,"0",STR_PAD_LEFT) . "</td>
-									<td class='blank_cell'>-<td>
-									<td class='blank_cell'>-<td>
+									<td class='blank-cell'>-</td>
+									<td class='blank-cell'>-</td>
 								</tr>";
 							}
 						}

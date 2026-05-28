@@ -1,21 +1,69 @@
 :root {
 	color-scheme: dark;
-	--bg: #07111f;
-	--bg-alt: #241508;
-	--panel: rgba(32, 20, 12, 0.82);
-	--panel-strong: rgba(44, 27, 16, 0.96);
-	--line: rgba(255, 184, 112, 0.18);
-	--line-strong: rgba(255, 184, 112, 0.3);
-	--text: #ecf3ff;
-	--muted: #b9a9a0;
-	--accent: #ffbf7a;
-	--accent-2: #ff8f4f;
+	--bg: #070607;
+	--bg-alt: #0b0b0b;
+	--panel: rgba(18, 10, 10, 0.82);
+	--panel-strong: rgba(22, 8, 8, 0.96);
+	--line: rgba(226, 27, 27, 0.18);
+	--line-strong: rgba(226, 27, 27, 0.28);
+	--text: #ffffff;
+	--muted: #cfcfcf;
+	--accent: #e21b1b;
+	--accent-2: #9b0f0f;
 	--shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
 	--radius-xl: 28px;
 	--radius-lg: 20px;
 	--radius-md: 14px;
-	--font-display: "Racing Sans One", "Impact", sans-serif;
+	--font-display: "Anton", "Impact", sans-serif;
 	--font-body: "Rajdhani", "Segoe UI", sans-serif;
+}
+
+/* Hero/banner to echo the poster artwork */
+.hero {
+	width: 100%;
+	min-height: 420px;
+	display: grid;
+	place-items: center;
+	color: var(--text);
+	background-color: #070607;
+	background-image: url('assets/images/timeattack-poster.jpg');
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	border-bottom: 6px solid rgba(0,0,0,0.6);
+}
+.hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+}
+.hero-inner {
+	position: relative;
+	z-index: 1;
+	width: min(1180px, calc(100% - 32px));
+	padding: 48px 16px;
+}
+.hero-content .hero-pre {
+	text-transform: uppercase;
+	color: var(--accent-2);
+	letter-spacing: 0.2em;
+	margin: 0 0 6px;
+	font-weight: 700;
+}
+.hero-content h1 {
+	margin: 0 0 6px;
+	font-family: var(--font-display);
+	font-size: clamp(2.2rem, 6vw, 5rem);
+	line-height: 0.9;
+	letter-spacing: 0.02em;
+	color: #fff;
+	text-shadow: 0 8px 30px rgba(0,0,0,0.8);
+}
+.hero-sub {
+	margin: 0;
+	color: rgba(255,255,255,0.85);
+	font-weight: 500;
 }
 
 * {
@@ -132,7 +180,7 @@ h2,
 
 .leaderboard-table tbody td {
 	padding: 18px 20px;
-	border-bottom: 1px solid rgba(145, 182, 255, 0.09);
+	border-bottom: 1px solid rgba(226, 27, 27, 0.06);
 	font-size: 0.98rem;
 }
 
@@ -141,7 +189,7 @@ h2,
 }
 
 .leaderboard-table tbody tr:hover {
-	background: rgba(105, 168, 255, 0.06);
+	background: rgba(226, 27, 27, 0.06);
 }
 
 .leaderboard-table tbody tr:last-child td {
@@ -197,7 +245,7 @@ h2,
 
 .entry-bubble__summary:hover {
 	transform: translateY(-2px);
-	border-color: rgba(124, 247, 212, 0.35);
+	border-color: rgba(226, 27, 27, 0.45);
 }
 
 .entry-bubble__icon {
@@ -206,8 +254,8 @@ h2,
 	border-radius: 999px;
 	display: grid;
 	place-items: center;
-	background: linear-gradient(135deg, rgba(124, 247, 212, 0.2), rgba(105, 168, 255, 0.16));
-	border: 1px solid rgba(124, 247, 212, 0.22);
+	background: linear-gradient(135deg, rgba(226,27,27,0.14), rgba(139,10,10,0.12));
+	border: 1px solid rgba(226,27,27,0.18);
 	color: var(--accent);
 	font-size: 1.3rem;
 	line-height: 1;
@@ -274,8 +322,8 @@ h2,
 .entry-bubble__hint {
 	padding: 6px 10px;
 	border-radius: 999px;
-	background: rgba(124, 247, 212, 0.1);
-	border: 1px solid rgba(124, 247, 212, 0.2);
+	background: rgba(226,27,27,0.06);
+	border: 1px solid rgba(226,27,27,0.12);
 	color: var(--accent);
 	white-space: nowrap;
 }
@@ -308,7 +356,7 @@ h2,
 }
 
 .entry-input:focus {
-	border-color: rgba(124, 247, 212, 0.5);
+	border-color: rgba(226,27,27,0.5);
 	background: rgba(255, 255, 255, 0.07);
 	transform: translateY(-1px);
 }
@@ -319,10 +367,10 @@ h2,
 
 .entry-button {
 	padding: 13px 14px;
-	border: 1px solid rgba(124, 247, 212, 0.24);
+	border: 1px solid rgba(226,27,27,0.36);
 	border-radius: 14px;
-	background: linear-gradient(135deg, rgba(124, 247, 212, 0.18), rgba(105, 168, 255, 0.14));
-	color: var(--text);
+	background: linear-gradient(135deg, rgba(226,27,27,0.22), rgba(155,15,15,0.16));
+	color: #fff;
 	font: inherit;
 	font-weight: 700;
 	text-transform: uppercase;
